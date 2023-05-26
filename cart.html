@@ -1,0 +1,61 @@
+<!DOCTYPE HTML> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cart.css' %}">
+</head>
+
+<body>
+<!-- navigation menu -->
+{% include "topnav.html" %}
+
+<div class="maincontent">
+    <h1 class="hhh1" style="font-size:50px; margin:0px; margin-bottom:30px">Your Cart</h1>
+    <div class="centerblock">
+    <!-- DYNAMIC CONTENT GOES HERE -->
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+        {% for item in items %}
+            <div>
+                <div class="cart-item cart-column">
+                    <img class="cart-item-image" src="{{item.product.imageURL}}" width="100" height="100">
+                    <span class="cart-item-title">{{item.product.title}}</span>
+                </div>
+                <span class="cart-price cart-column">£{{item.product.price}}</span>
+                <div class="cart-quantity cart-column">
+                    <div class="quantity">
+                        <button data-product={{item.product.id}} data-action="remove" id="minus" class="btn minus1 update-cart">-</button>
+                        <input class="cart-quantity-input quantity" type="number" id="id_form-0-quantity" name="quantity" min="1" max="5" value="{{item.quantity}}">
+                        <button data-product={{item.product.id}} data-action="add" id="plus" class="btn add1 update-cart">+</button>
+                        <button class="removeButton" type="button">REMOVE</button>
+                    </div>
+            {% endfor %}
+                </div>
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">£{{order.get_cart_total}}</span>
+            </div>
+            <div class="ordersummary">
+                <form action="checkout-info" method="post">
+                {% csrf_token %}
+                <input type="submit" value="CHECKOUT">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "footer.html" %}
+
+<script src="{% static 'js/cart.js' %}" ></script>
+<!--<script src="{% static 'js/test.js' %}" ></script>-->
+
+</body>
+
+</html>
