@@ -1,0 +1,172 @@
+<html>
+<head>
+    <title>FABLE</title>
+    <link rel="stylesheet" href="fablestyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+</head>
+<body>
+    <section id="banner">
+        <img src=" fable logo.png" class="logo">
+        <div class="banner-text">
+            <h1>Fest Events</h1>
+            <p>Lets have some fun</p>
+                        <div class="form">
+                            <h2>Login Here</h2>
+                            <input type="email" name="email" placeholder="Enter Email Here">
+                            <input type="password" name="" placeholder="Enter Password Here">
+                            <button class="btnn"><a href="#">Login</a></button>
+                            <p class="link">Don't have an account<br>
+                            <a href="#">Sign up </a> here</a></p>
+                            <p class="liw">Log in with</p>
+                            <div class="icons">
+                                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                                <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                                <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                            </div>
+                        </div>
+         </div>
+    </section>
+    <div id="sideNav">
+        <nav>
+            <ul>
+                <li><a href="#banner">LOGIN</a></li>
+                <li><a href="#dashboard">DASH BOARD</a></li>
+                <li><a href="#events">EVENTS</a></li>
+                <li><a href="#footer">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div id="menubtn">
+        <img src="menu.png" id="menu">
+    </div>
+    <section id="dashboard">
+        <div class="title-text">
+            <p>select your events</p>
+            <h1>enjoy your party</h1>
+        </div>
+        <div class="dashboard-box">
+            <div class="dashboard">
+                <h1>convinent usage</h1>
+                <div class="dashboard-desc">
+                    <div class="dashboard-icon">
+                        <i class="fa fa-shield"></i>
+                    </div>
+                    <div class="dashboard-text">
+                        <p>book from home</p>
+                    </div>
+                </div>
+                <h1>pre booking online</h1>
+                <div class="dashboard-desc">
+                    <div class="dashboard-icon">
+                        <i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="dashboard-text">
+                        <p>24/7 available</p>
+                    </div>
+                </div>
+                <h1>affordable cost</h1>
+                <div class="dashboard-desc">
+                    <div class="dashboard-icon">
+                        <i class="fa fa-inr"></i>
+                    </div>
+                    <div class="dashboard-text">
+                        <p>book tickets at low price</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-img">
+                <img src="barber-man.jpg">
+            </div>
+        </div>
+    </section>
+    <section id="service">
+        <div class="title-text">
+            <p>EVENTS</p>
+            <h1>we organise you enjoy</h1>
+        </div>
+        <div class="events-box">
+            <div class="single-events">
+                <img src="pic-1.jpg">
+                <div class="overlay"></div>
+                <div class="events-desc">
+                    <h3>hair styling</h3>
+                    <hr>
+                    <p>modellllllllll</p>
+                </div>
+            </div>
+            <div class="single-events">
+                <img src="pic-2.jpg">
+                <div class="overlay"></div>
+                <div class="events-desc">
+                    <h3>trim</h3>
+                    <hr>
+                    <p>modellllllllll</p>
+                </div>
+            </div>
+            <div class="single-events">
+                <img src="pic-3.jpg">
+                <div class="overlay"></div>
+                <div class="events-desc">
+                    <h3>cut</h3>
+                    <hr>
+                    <p>modellllllllll</p>
+                </div>
+            </div>
+            <div class="single-events">
+                <img src="pic-4.jpg">
+                <div class="overlay"></div>
+                <div class="events-desc">
+                    <h3>dye</h3>
+                    <hr>
+                    <p>modellllllllll</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <img src="footer-img.png" class="footer-img">
+        <div class="title-text">
+            <h1>contact</h1>
+        </div>
+        <div class="footer-right">
+            <h1>get in touch</h1>
+        <p>fable@gmail.com<i class="fa fa-pappa-plane"></i></p>
+        <p>9443166481<i class="fa fa-phone"></i></p>
+        </div>
+        <div class="social-links">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-youtube-play"></i>
+            <p>copyright fable</p>
+        </div>
+        <script>
+            var menubtn = document.getElementById("menubtn")
+            var sideNav = document.getElementById("sideNav")
+            var menu = document.getElementById("menu")
+            sideNav.style.right = "-250px"
+            menubtn.onclick = function () {
+                if (sideNav.style.right == "-250px") {
+                    sideNav.style.right = "0";
+                    menu.src = "close.png";
+                }
+                else {
+                    sideNav.style.right = "-250px";
+                    menu.src = "menu.png";
+                }
+            }
+            var scroll = new smoothscroll('a[href*="#"]', {
+                speed: 1000,
+                speedAsDuration: true
+            });
+        </script>
+</body>
+</html>
